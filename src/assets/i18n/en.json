@@ -1,0 +1,18 @@
+{
+  "HOME": {
+    "HOME_PAGE": "Home Page"
+  },
+
+  "ERRORS": {
+    "404": "Oops!! Page Not Found"
+  },
+
+  "required_validation": "This field is required",
+  "minlength_validation": "Min Length",
+  "maxlength_validation": "Max Length",
+  "email_validation": "Email isn't valid",
+  "max_validation": "Max Must be 100",
+  "arabicWord_validation": "Please enter arabic characters",
+  "englishWord_validation": "Please enter english characters",
+  "pattern_validation": "Please enter a valid pattern"
+}

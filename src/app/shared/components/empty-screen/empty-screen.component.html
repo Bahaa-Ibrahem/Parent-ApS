@@ -1,0 +1,5 @@
+<div class="empty-screen d-flex flex-column justify-content-center align-items-center h-100 text-dark">
+    <img [src]="'assets/images/empty/' + imageName" alt="Empty Icon" *ngIf="imageName">
+    <h3 class="m-0 font-18 mt-3" *ngIf="text">{{ text }}</h3>
+    <h6 class="m-0 font-14 mt-1 regular font-weight-bold" *ngIf="subText">{{ subText }}</h6>
+</div>

@@ -1,0 +1,46 @@
+<div class="header mb-3 mb-md-0">
+    <div class="container">
+        <div class="row d-flex">
+            <div class="col-md-6 px-0 d-flex align-items-center justify-content-start">
+                <ul>
+                    <li class="title">
+                        <span class="text-white">Hi ,</span>
+                        <span class="text-white">Welcome Back , let's start!</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-md-6 px-0 d-flex align-items-center justify-content-end" setRtl>
+                <mat-list class="navbar-nav d-flex flex-column flex-xl-row align-items-center p-0" role="list">
+                    <mat-list-item class="nav-item px-3" role="listitem">
+                      <div class="wrapper text-white d-flex align-items-center">
+                        <span class="cursor-pointer text-white d-flex justify-content-center align-items-center" (click)="changeLanguage()">
+                            <svg class="m-inline-end-2" xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24">
+                              <g transform="translate(1.916667 1.916667)" stroke="#fff" stroke-width="2" fill="none" fill-rule="evenodd">
+                                <path stroke-linecap="round" d="M.91666667 11.9166667H7.21875L11 15.724359v3.9839743"/>
+                                <path d="M3.66666667 2.75l4.125 4.125H12.375l3.2083333 3.2083333H19.25" stroke-linecap="square"/>
+                                <circle stroke-linecap="square" cx="10.0833333" cy="10.0833333" r="10.0833333"/>
+                              </g>
+                            </svg>
+
+                            {{ currentLang === 'en' ? 'العربية' : 'English' }}
+                        </span>
+                      </div>
+                    </mat-list-item>
+                </mat-list>
+
+                <a class="">
+                    <button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <i class="fa-solid fa-angle-down"></i>
+                        <mat-icon>account_circle</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item (click)="logout()">
+                            <span>Logout</span>
+                        </button>
+                    </mat-menu>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

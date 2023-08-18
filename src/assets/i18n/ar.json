@@ -1,0 +1,18 @@
+{
+  "HOME": {
+    "HOME_PAGE": "الصفحة الرئيسية"
+  },
+
+  "ERRORS": {
+    "404": "Oops!!الصفحة غير موجودة"
+  },
+
+  "required_validation": "هذا الحقل إجباري",
+  "minlength_validation": "الحد الأدنى",
+  "maxlength_validation": "الحد الأقصى",
+  "max_validation": "اقصي رقم هو 100",
+  "email_validation": "البريد الإلكترونى غير صحيح",
+  "arabicWord_validation": "من فضلك إدخل حروف عربي",
+  "englishWord_validation": "من فضلك إدخل حروف انجليزي",
+  "pattern_validation": "من فضلك إدخل نمط صحيح "
+}

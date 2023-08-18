@@ -1,0 +1,84 @@
+button {
+  &:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .mat-button-focus-overlay {
+    background: $white;
+  }
+}
+
+.btn-disabled {
+  background-color: transparent !important;
+}
+
+.main-btn {
+  border-radius: 0 !important;
+  min-height: 34px;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: auto;
+
+  * {
+    vertical-align: unset !important;
+  }
+
+  &.max-content {
+    min-width: max-content;
+  }
+
+  &.white {
+    background-color: $white;
+    color: $primary;
+  }
+
+  &.main {
+    background-color: $primary;
+    color: $white;
+
+    &:disabled {
+      background-color: #dde0e2;
+    }
+  }
+
+  &.light {
+    background-color: $primary;
+    color: $white;
+
+    &:disabled {
+      background-color: #dde0e2;
+    }
+  }
+
+  &.secondary {
+    background-color: $secondary;
+    color: $white;
+
+    &:disabled {
+      background-color: #dde0e2;
+      color: #ccc;
+    }
+  }
+
+  &.defualt {
+    background-color: #F3F3F1;
+    color: $black;
+  }
+
+  &.flat {
+    border: none;
+  }
+
+  &.approve {
+    border-color: #00C48C !important;
+    background-color: #00C48C !important;
+    color: $white !important;
+  }
+
+  &.btn-block {
+    width: 100% !important;
+  }
+}

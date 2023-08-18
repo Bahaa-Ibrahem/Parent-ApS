@@ -1,0 +1,91 @@
+@import "../../../../assets/scss/style.scss";
+
+.header {
+    background-color: $primary;
+    width: 100%;
+
+    .row {
+        margin-left: initial;
+        margin-right: initial;
+        height: 80px;
+    }
+
+    .log {
+        display: block;
+        float: right;
+        width: 100px;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        li {
+            &.title {
+                span:nth-child(1) {
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #1d252d;
+                    display: block;
+                    margin-bottom: 5px;
+                }
+
+                span:nth-child(2) {
+                    font-size: 16px;
+                    font-weight: 100;
+                    color: #8e9aa0;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .sign-btn {
+        background-color: transparent;
+        border-color: #ccc;
+        color: #fff;
+    }
+
+    .lang {
+      margin-inline-end: 10px;
+    }
+
+    a {
+        padding: 8px;
+
+        button {
+            display: flex;
+            align-items: center;
+            line-height: 20px;
+            border: none;
+            background-color: transparent;
+
+            mat-icon {
+              color: #fff;
+            }
+
+            i {
+                color: rgba(0, 0, 0, 0.54);
+                margin-inline-end: 8px;
+                vertical-align: middle;
+            }
+
+            img {
+            width: 45px;
+            height: 45px;
+            }
+        }
+
+    }
+
+    .rtl {
+        .cdk-overlay-connected-position-bounding-box {
+            left: 85px;
+        }
+    }
+
+}

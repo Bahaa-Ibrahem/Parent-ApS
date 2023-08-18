@@ -1,0 +1,13 @@
+main {
+  height: 100vh;
+  overflow: hidden;
+
+  .main-content {
+
+    .main-page {
+      background-color: #fff;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+}
