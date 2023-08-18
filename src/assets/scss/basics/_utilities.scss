@@ -211,42 +211,12 @@
   padding-inline-end: 2.5rem !important;
 }
 
-// badge
-.badge-circle {
-  width: 35px;
-  min-width: 35px !important;
-  height: 35px;
-  max-height: 35px !important;
-  border-radius: 50% !important;
-}
-
-.badge-square {
-  width: 30px;
-  min-width: 30px !important;
-  height: 25px;
-  max-height: 25px !important;
-  border-radius: 2px !important;
-}
-
-.w-max {
-  width: max-content;
-  min-width: max-content;
-}
-
-.page-wrapper {
-  padding: 1.5rem clamp(1rem, 5vw, 2.5rem) !important;
-}
-
 .p-x {
   padding-inline: clamp(1rem, 5vw, 2.5rem) !important;
 }
 
 .p-y {
   padding-block: clamp(1rem, 5vw, 2.5rem) !important;
-}
-
-.page-title {
-  font-size: clamp(1.2rem, 1.9vw, 2.5rem) !important;
 }
 
 /* Scrollbar Styles Start Here*/
