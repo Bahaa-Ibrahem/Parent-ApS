@@ -1,0 +1,27 @@
+@import "../../../../assets/scss/style.scss";
+
+input {
+  min-height: 40px !important;
+  max-height: 40px !important;
+  padding: 0 15px !important;
+  border-radius: 8px;
+  border: 1px solid #D6DBE4 !important;
+
+  &::placeholder {
+    font-size: 15px;
+    color: $gray-light;
+  }
+}
+
+textarea {
+  font-size: 14px;
+  color: #7E7E7E;
+  padding: 15px !important;
+  border-radius: 8px;
+  border: 1px solid #D6DBE4 !important;
+
+  &::placeholder {
+    font-size: 15px;
+    color: $gray-light;
+  }
+}

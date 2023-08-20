@@ -1,0 +1,16 @@
+<div class="side-bar p-3 d-flex align-items-center justify-content-start flex-column">
+<span class="closeIcon clickable" (click)="openSideBar.emit(false)">x</span>
+
+<img class="avatar border-radius-50 mt-5" [src]="data.avatar" alt="">
+
+<p class="font-26 text-secondary mt-4">{{data.first_name}}</p>
+
+<div class="mt-4 d-flex">
+  <button (click)="openDialog(data.id)" class="main-btn main font-15 border-radius-25 px-4 me-1">
+    <img src="assets/images/icons/edit-white.svg" alt="" class="me-2"> Edit
+  </button>
+  <button (click)="openDialogDelete(data.id)" class="main-btn secondary font-15 border-radius-25 px-4 ms-1">
+    <img src="assets/images/icons/delete.svg" alt="" class="me-2"> Delete
+  </button>
+</div>
+</div>

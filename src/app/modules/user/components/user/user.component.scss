@@ -1,0 +1,13 @@
+.avatar {
+  height: 106px;
+  width: 106px;
+  border: 3px solid #FFFFFF;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+
+  &.add {
+    border: 3px solid #FFFFFF;
+    background-color: #7F8C8D;
+  }
+}

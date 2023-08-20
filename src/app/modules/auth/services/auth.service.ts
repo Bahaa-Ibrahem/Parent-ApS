@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable, combineLatest } from 'rxjs';
@@ -14,7 +15,11 @@ export class AuthService {
   userDetails: BehaviorSubject<any> = new BehaviorSubject(null);
   adminList: BehaviorSubject<string[] | any> = new BehaviorSubject(null);
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private http: HttpClient) { }
+
+  login(data: any) {
+    return this.http.post('https://reqres.in/api/login', data);
+  }
 
   logOut() {
     localStorage.clear();
@@ -23,14 +28,7 @@ export class AuthService {
   }
 
   isAuthenticated() {
-    try {
-      const token = JSON.parse(localStorage.getItem('token') || '{}');
-      const decodedToken = helper.decodeToken(token);
-      const isExpired = helper.isTokenExpired(token);
-      return !!decodedToken && !isExpired;
-    }
-    catch (ex) {
-      return false;
-    }
+    const token = localStorage.getItem('token');
+    return token ? true : false;
   }
 }

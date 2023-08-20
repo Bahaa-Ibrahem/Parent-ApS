@@ -1,0 +1,37 @@
+<div class="card m-auto text-start">
+  <img class="login-img" src="assets/images/login/login.png" alt="">
+
+  <div class="form my-auto px-3 w-100">
+    <h3 class="font-25 text-secondary">Welcome back!</h3>
+    <p class="font-15 text-gray-light">Please login to access your Spaces Dashboard</p>
+
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label class="font-14 text-gray-light my-2">Email</label>
+        <app-input
+        [formGroup]="loginForm"
+        controlName="email"
+        [placeholder]="'Email…'"></app-input>
+      </div>
+
+      <div>
+        <label class="font-14 text-gray-light my-2">Password</label>
+        <app-input
+        [formGroup]="loginForm"
+        controlName="password"
+        [placeholder]="'Password...'"></app-input>
+      </div>
+
+      <div class="d-flex justify-content-between mt-4">
+        <span class="font-14 text-main">Forgot password?</span>
+        <button class="main-btn main font-15 border-radius-25 px-4" type="submit" [disabled]="!loginForm.valid">
+          LOGIN
+        </button>
+      </div>
+    </form>
+
+  </div>
+
+
+</div>

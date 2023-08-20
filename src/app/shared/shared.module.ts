@@ -13,6 +13,7 @@ import { ValidationHandlerPipe } from './pipes/validation-handler.pipe';
 
 import { EmptyScreenComponent } from './components/empty-screen/empty-screen.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoadingComponent } from './components/loading/loading.component';
     SpecificLanguageValidatiorDirective,
     LoadingComponent,
     EmptyScreenComponent,
+    InputComponent
 
   ],
   imports: [
@@ -43,7 +45,8 @@ import { LoadingComponent } from './components/loading/loading.component';
     NgSelectModule,
     ReactiveFormsModule,
     TranslateModule,
-    MaterialModule
+    MaterialModule,
+    InputComponent
   ]
 })
 export class SharedModule { }

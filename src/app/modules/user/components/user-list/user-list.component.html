@@ -1,0 +1,52 @@
+<div class="bg-gray py-3">
+  <div class="container">
+    <div class="row">
+      <span class="font-15 text-main">Home / Dashboard</span>
+    </div>
+    <div class="row mt-4">
+      <div class="d-flex flex-row justify-content-between">
+        <p class="font-30 text-secondary">Users List</p>
+        <button (click)="openDialog()" class="main-btn main font-15 border-radius-25 px-3">+ New User</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="user-list my-3">
+  <div class="container">
+    <div class="card p-3 position-relative">
+      <div class="items" [ngStyle]="{'width': openSideBar ? 'calc(100% - 262px)' : '100%'}">
+        <div class="d-flex justify-content-between align-items-center py-3 ps-2 pe-5">
+          <span class="font-12 text-gray-light">User</span>
+          <span class="font-12 text-gray-light">Actions</span>
+        </div>
+        <div
+        (click)="onSelectUser(user); setIndex(i)"
+        *ngFor="let user of usersList; let i = index"
+        [class.active]="selectedIndex === i"
+        class="item d-flex justify-content-between align-items-center py-3 px-2">
+          <div>
+            <img class="avatar border-radius-50" [src]="user.avatar" alt="">
+            <span class="font-15 text-secondary ps-3">{{user.first_name}}</span>
+          </div>
+         <div class="icons">
+          <img class="px-2 me-2 border clickable" src="assets/images/icons/edit.svg" alt="">
+          <img class="px-2 me-4 border clickable" src="assets/images/icons/delete.svg" alt="">
+          <span class="clickable font-18 text-main">></span>
+         </div>
+        </div>
+      </div>
+      <div class="m-auto mt-2">
+        <img class="d-block m-auto" src="assets/images/icons/loading.png" alt="">
+        <p class="font-12 text-main mt-2">Loading more users</p>
+      </div>
+
+      <app-side-bar
+      *ngIf="openSideBar"
+      (openSideBar)="openSideBar = $event"
+      [data]="selectedUser"
+      ></app-side-bar>
+
+    </div>
+  </div>
+</div>

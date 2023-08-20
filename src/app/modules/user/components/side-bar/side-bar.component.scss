@@ -1,0 +1,25 @@
+.side-bar {
+  border-radius: 0 10px 10px 0;
+  background-color: #F5F5F5;
+  box-shadow: -2px 0 4px 0 rgba(0,0,0,0.2);
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 262px;
+
+  .closeIcon {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    font-weight: 900;
+  }
+
+  .avatar {
+    height: 127px;
+    width: 127px;
+    border: 1px solid #FFFFFF;
+  }
+}
+

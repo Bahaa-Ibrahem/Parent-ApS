@@ -14,7 +14,7 @@ button {
 }
 
 .main-btn {
-  border-radius: 0 !important;
+  border-radius: 0;
   min-height: 34px;
   display: flex !important;
   justify-content: center;
@@ -54,8 +54,9 @@ button {
   }
 
   &.secondary {
-    background-color: $secondary;
-    color: $white;
+    background-color: transparent;
+    color: $primary;
+    border: 1px solid $primary;
 
     &:disabled {
       background-color: #dde0e2;

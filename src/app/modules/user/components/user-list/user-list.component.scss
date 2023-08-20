@@ -1,0 +1,47 @@
+@import "../../../../../assets/scss/style.scss";
+
+.user-list {
+  .card {
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2);
+    .items {
+      .item {
+        border-bottom: 1px solid #DEDEDE;
+        .avatar {
+          height: 55px;
+          width: 55px;
+        }
+
+        .icons {
+          .border {
+            box-sizing: border-box;
+            height: 32px;
+            width: 32px;
+            border: 1px solid $primary;
+            border-radius: 3px;
+            background-color: #FFFFFF;
+          }
+        }
+
+        &:hover {
+          border-radius: 10px;
+          background-color: rgba(142,68,173,0.05);
+        }
+
+        &.active {
+          border-radius: 10px;
+          background-color: $primary;
+
+          span {
+            color: $white !important;
+          }
+
+          .icons {
+            .border {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

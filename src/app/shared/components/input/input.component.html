@@ -1,0 +1,35 @@
+<div class="inner-addon right-addon" *ngIf="type !== 'textarea'">
+  <span [ngClass]="iconName" class="internal-search field-icon pointer-cursor" id="basic-addon1" (click)="onSearch()"></span>
+  <div class="input-group {{inputGroupText ? 'has-group-text' : '' }} left" [formGroup]="formGroup">
+    <span *ngIf="inputGroupText" class="input-group-text" id="basic-addon1">{{inputGroupText}}</span>
+    <input
+      [formControlName]="controlName"
+      internalRecruitmentRtl
+      ngClass="form-control {{className}}"
+      [type]="type"
+      [placeholder]="placeholder"
+      [disabled]="disabled"
+      [readonly]="readonly"
+      [hidden]="hidden"
+      (keyup)="eventChange.emit(true)"
+      [attr.maxlength]="maxlength"
+      onkeypress="return event.keyCode != 13;"
+    />
+    <div class="input-group-append percentage" *ngIf="isPercentage">
+      <span class="input-group-text" irsRtl id="basic-addon2">%</span>
+    </div>
+  </div>
+</div>
+<div *ngIf="type === 'textarea'" [formGroup]="formGroup" ngClass="{{className}}">
+  <textarea
+  [formControlName]="controlName"
+  internalRecruitmentRtl
+  rows="3"
+  [placeholder]="placeholder"
+  ngClass="form-control {{className}}"
+  ></textarea>
+</div>
+
+<div *ngIf="formGroup.get(controlName)?.errors && formGroup.get(controlName)?.touched">
+<span class="font-12 text-danger">{{ formGroup.get(controlName)?.errors | validationHandler }}</span>
+</div>

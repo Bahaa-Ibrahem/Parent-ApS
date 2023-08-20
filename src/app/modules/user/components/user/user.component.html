@@ -1,0 +1,24 @@
+<div class="p-3">
+  <img *ngIf="editMode" class="avatar" [src]="user.avatar" alt="">
+  <img class="avatar add" *ngIf="!editMode" src="assets/images/icons/user.svg" alt="">
+  <label class="font-14 text-gray-light my-2 d-block">Name</label>
+  <app-input
+  [formGroup]="form"
+  [controlName]="'name'"
+  ></app-input>
+
+  <label class="font-14 text-gray-light my-2">Job title…</label>
+  <app-input
+  [formGroup]="form"
+  [controlName]="'job'"
+  ></app-input>
+
+  <div class="mt-4 d-flex">
+    <button mat-dialog-close class="main-btn secondary font-15 border-radius-25 px-4 me-1"> Cancle
+    </button>
+    <button (click)="editMode ? updateUser(data.id) : addUser()" class="main-btn main font-15 border-radius-25 px-4 ms-1"> {{editMode ? 'Save' : 'Add'}}
+    </button>
+  </div>
+
+</div>
+

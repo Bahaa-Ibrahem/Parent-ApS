@@ -1,23 +1,12 @@
 
 /* Fonts */
-$font-light: sans-serif;
-$font-regular: sans-serif;
-$font-bold: sans-serif;
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  &:not(.regular) {
-    font-family: $font-bold;
-  }
-
-  &.regular {
-    font-family: $font-regular;
-  }
+@font-face {
+  font-family: "SFNS Regular";
+  font-display: swap;
+  src: url("/assets/fonts/SFNS Display Regular.ttf") format("truetype");
 }
+
+$font-regular: "SFNS Regular", sans-serif;
 
 .font-8 {
   font-size: .5rem !important;
